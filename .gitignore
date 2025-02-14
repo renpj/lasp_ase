@@ -172,3 +172,7 @@ cython_debug/
 
 # these .pot files are necessary for running examples
 !example/*.pot
+
+lasp_ase/
+!lasp_ase/__init__.py
+!lasp_ase/lasp.py
