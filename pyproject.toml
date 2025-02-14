@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lasp_ase"
+version = "0.0.1"
+authors = [
+  { name="Liu Xingchen Research Group, Institute of Coal Chemistry, Chinese Academy of Sciences" }, 
+  { name="PJ Ren", email="openrpj@gmail.com" }, 
+  { name="Jiawii", email="2127409103@qq.com" }, 
+]
+description = "ASE calculator for LASP"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3", 
+    "License :: OSI Approved :: MIT License", 
+    "Operating System :: Linux"
+]
+
+[project.scripts]
+fit-gaussians = "thunder_ase.utils:fit_gaussian_command"
+
+[tool.setuptools]
+packages=['lasp_ase']
+
+[project.urls]
+"Homepage" = "https://github.com/renpj/lasp_ase"
+"Bug Tracker" = "https://github.com/renpj/lasp_ase/issues"

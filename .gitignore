@@ -169,3 +169,6 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# these .pot files are necessary for running examples
+!example/*.pot
