@@ -14,7 +14,7 @@ class Lasp(FileIOCalculator):
     if 'ASE_LASP_COMMAND' in os.environ:
         command = os.environ['ASE_LASP_COMMAND'] 
     else:
-        command = 'mpirun -np 24 lasp'
+        command = 'mpirun -np 2 lasp'
         
     implemented_properties = ['energy', 'forces']
  
@@ -29,7 +29,7 @@ class Lasp(FileIOCalculator):
         self.outfilename = 'lasp.out'
 
         FileIOCalculator.__init__(self, restart, ignore_bad_restart_file,
-                                  label, atoms,
+                                  label, atoms,self.command,
                                   **kwargs)  
 
     def write_input(self, atoms, properties=None, system_changes=None):

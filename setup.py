@@ -6,7 +6,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 setuptools.setup(
     name="lasp_ase", 
     version="0.0.1", 
-    author="Liu Xingchen Research Group, Institute of Coal Chemistry, Chinese Academy of Sciences", 
+    author="",
     description="ASE calculator for LASP", 
     long_description=long_description, 
     long_description_content_type="text/markdown", 
