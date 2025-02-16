@@ -1,0 +1,1 @@
+rm *.arc *.log *.out *traj

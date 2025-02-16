@@ -1,13 +1,12 @@
 """ 
 This module defines a FileIOCalculator for LASP
-
+Only support define the calculator and call the binary, input generation
+ and output analysis don't support yet.
 """
 
 import os
 import numpy as np
-from ase.calculators.calculator import (FileIOCalculator, kpts2ndarray,
-                                        kpts2sizeandoffsets)
-from ase.units import Bohr, Hartree
+from ase.calculators.calculator import FileIOCalculator
 
 
 class Lasp(FileIOCalculator):
