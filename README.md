@@ -11,7 +11,7 @@ ASE calculator for LASP (http://www.lasphub.com)
 
 ### 安装
 
-使用 `pip install -U lasp_ase
+使用 `pip install -U lasp_ase`
 
 ## run example
 ```bash
