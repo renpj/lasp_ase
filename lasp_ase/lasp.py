@@ -38,7 +38,7 @@ class Lasp(FileIOCalculator):
                 self.do_forces = True
         FileIOCalculator.write_input(
             self, atoms, properties, system_changes)
-        write(os.path.join(self.directory, 'input.arc'), atoms, format="arc", 
+        write(os.path.join(self.directory, 'input.arc'), atoms, format="dmol-arc",
               parallel=False)
         # self.atoms is none until results are read out,
         # then it is set to the ones at writing input
