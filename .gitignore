@@ -169,3 +169,8 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+.idea
+# these .pot files are necessary for running examples
+example/*.arc
+example/*.out
+example/*traj

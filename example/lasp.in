@@ -1,0 +1,19 @@
+potential NN
+explore_type ssw
+Ewaldflag    0
+%block netinfo
+  Cu CuCHO.pot
+  O  CuCHO.pot 
+  H  CuCHO.pot 
+  C  CuCHO.pot 
+%endblock netinfo
+PrintChg 0
+
+Run_type 5    #    5  for SSW with fixed cell
+
+SSW.SSWsteps  0     # 0 single point
+
+SSW.output T
+SSW.printevery T
+
+
