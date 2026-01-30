@@ -8,7 +8,7 @@ install_requires = [
 ]
 setuptools.setup(
     name="lasp_ase", 
-    version="0.0.2",
+    version="0.0.3",
     author="",
     description="ASE calculator for LASP", 
     long_description=long_description, 

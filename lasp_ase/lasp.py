@@ -26,10 +26,10 @@ class Lasp(FileIOCalculator):
         self.atoms_input = None
         self.do_forces = False
         self.outfilename = 'lasp.out'
-
+        if not kwargs.get('command'):
+            kwargs['command'] = self.command
         FileIOCalculator.__init__(self, restart, ignore_bad_restart_file,
-                                  label, atoms,self.command,
-                                  **kwargs)  
+                                  label, atoms, **kwargs)
 
     def write_input(self, atoms, properties=None, system_changes=None):
         from ase.io import write
