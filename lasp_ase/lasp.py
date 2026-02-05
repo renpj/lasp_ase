@@ -10,11 +10,6 @@ from ase.calculators.calculator import FileIOCalculator
 
 
 class Lasp(FileIOCalculator):
-    if 'ASE_LASP_COMMAND' in os.environ:
-        command = os.environ['ASE_LASP_COMMAND'] 
-    else:
-        command = 'mpirun -np 2 lasp'
-        
     implemented_properties = ['energy', 'forces']
  
     def __init__(self, restart=None,
@@ -27,7 +22,11 @@ class Lasp(FileIOCalculator):
         self.do_forces = False
         self.outfilename = 'lasp.out'
         if not kwargs.get('command'):
-            kwargs['command'] = self.command
+            if 'ASE_LASP_COMMAND' in os.environ:
+                command = os.environ['ASE_LASP_COMMAND']
+            else:
+                command = 'mpirun -np 2 lasp'
+            kwargs['command'] = command
         FileIOCalculator.__init__(self, restart, ignore_bad_restart_file,
                                   label, atoms, **kwargs)
 
